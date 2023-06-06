@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "lib": ["dom", "ESNext"],
+      "rootDir": "./src",
+      "baseUrl": "./",
+      "allowJs": false,
+      "skipLibCheck": true,
+      "allowImportingTsExtensions": true,
+      "strict": true,
+      "strictPropertyInitialization": false,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "react-jsx",
+      "incremental": true,
+      "noImplicitThis": true,
+    },
+    "include": ["src/**/*.tsx", "src/**/*.ts", "declaration.d.ts"],
+    "exclude": ["node_modules"]
+
+  }
