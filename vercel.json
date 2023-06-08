@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "installCommand": "yarn && cd client && yarn && cd .. && yarn build && yarn client:build",
     "builds": [
         {
             "src": "./server/dist/server.js",
