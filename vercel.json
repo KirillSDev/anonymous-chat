@@ -1,11 +1,13 @@
 {
-    "version": 2,
-    "buildCommand": "yarn --prefix client && yarn && yarn build && yarn build:client",
-    "builds": [
-      { "src": "server/dist/server.js", "use": "@vercel/node" }
-
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "server/dist/server.js" }
-    ]
+    "build": {
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "functions": {
+        "api/**/*.{js,ts}": {
+          "runtime": "nodejs18"
+        }
+      },
+      "command": "node server/dist/server.js"
+    }
   }
