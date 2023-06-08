@@ -15,8 +15,7 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "envSecrets": {
-    },
+
     "build": {
       "env": {
         "NODE_ENV": "production"
