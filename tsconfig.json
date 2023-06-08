@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ES2018",
+      "module": "CommonJS",
+      "baseUrl": "./",
+      "resolveJsonModule": true,
+      "outDir": "server/dist",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipLibCheck": true
+    },
+    "include": ["./server/**/*.ts", "server/server.ts"],
+    "exclude": ["node_modules", "client"]
+}
