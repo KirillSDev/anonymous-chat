@@ -19,6 +19,15 @@
       "jsx": "react-jsx",
       "incremental": true,
       "noImplicitThis": true,
+      "paths": {
+        "@components/*": ["src/components/*"],
+        "@pages/*": ["src/pages/*"],
+        "@layout/*": ["src/layout/*"],
+        "@utils/*": ["src/utils/*"],
+        "@sockets/*": ["src/sockets/*"],
+        "@interfaces/*": ["src/interfaces/*"],
+        "@store/*": ["src/store/*"]
+      }
     },
     "include": ["src/**/*.tsx", "src/**/*.ts", "declaration.d.ts"],
     "exclude": ["node_modules"]
