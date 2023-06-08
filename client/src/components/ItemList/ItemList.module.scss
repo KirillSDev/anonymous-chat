@@ -1,0 +1,38 @@
+.item-list {
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    position: relative;
+    &__header {
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+        width: 100%;
+    }
+    &__subject {
+        width: 100%;
+
+        &__text {
+            word-break: break-all;
+            background-color: #d4d4d494;
+
+            padding: 5px;
+        }
+    }
+    &__name {
+        text-align: left;
+        font-size: 1em;
+        font-weight: 500;
+    }
+    &__date {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.479);
+        display: flex;
+        justify-content: end;
+    }
+}
