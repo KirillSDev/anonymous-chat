@@ -1,13 +1,34 @@
 {
+    "version": 2,
+    "builds": [
+      {
+        "src": "server/dist/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/.*",
+        "dest": "server/dist/server.js"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "envSecrets": {
+    },
     "build": {
       "env": {
         "NODE_ENV": "production"
       },
+      "commands": [
+        "yarn install && cd client && yarn install && cd .. && yarn build && yarn client:build"
+      ],
+      "output": "server/dist",
       "functions": {
         "api/**/*.{js,ts}": {
           "runtime": "nodejs18"
         }
-      },
-      "command": "node server/dist/server.js"
+      }
     }
   }
