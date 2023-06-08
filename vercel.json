@@ -1,16 +1,19 @@
 {
-    "version": 2,
-    "installCommand": "yarn && cd client && yarn && cd .. && yarn build && yarn client:build",
     "builds": [
-        {
-            "src": "./server/dist/server.js",
-            "use": "@vercel/node"
-        }
+      { "src": "server/dist/server.js", "use": "@vercel/node" },
+      { "src": "client/dist", "use": "@vercel/static" }
     ],
+    "version": 2,
+    "build": {
+      "env": {
+        "NPM_RUN_BUILD_COMMAND": "yarn && yarn install --prefix client && yarn build && yarn client:build"
+      },
+      "scripts": {
+        "build": "yarn && yarn install --prefix client && yarn build && yarn client:build",
+        "dev": "yarn dev --prefix server"
+      }
+    },
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
+      { "src": "/(.*)", "dest": "server/dist/server.js" }
     ]
-}
+  }
